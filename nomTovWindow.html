@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Номенклатура товара</title>
+      <link href="style/bootstrap-5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+      <script src="./style/bootstrap-5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+      <link rel="stylesheet" href="style/main.css">
+      <script src="./scripts/mainScript.js"></script>
+  </head>
+  <body>
+    <button class="btn btn-light func back" onclick="closeNomTov()">
+      Назад
+    </button>
+    <button class="btn btn-light func" onclick="openPost()">
+      Поставщики
+    </button>
+    <table class="table table-hover table-borderless">
+      <thead>
+        <col style="width: 13%;" />
+        <col style="width: 9%;" />
+        <col style="width: 6%;" />
+        <col style="width: 10%;" />
+        <col style="width: 15%;" />
+        <col style="width: 6%;" />
+        <col style="width: 16%;" />
+        <col style="width: 9%;" />
+        <col style="width: 12%;" />
+        <tr>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','nameTovar')">Наименование товара</button></th>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','colTovar')">Количество (шт)</button></th>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','garantTovar')">Гарантия</button></th>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','personalTovar')">Ответственный</button></th>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','postTovar')">Поставщик</button></th>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','priceTovar')">Цена</button></th>
+          <th><button class="btn btn-light" onclick="sortBy('nomtovar','filialTovar')">Филиал</button></th>
+          <th><button class="btn btn-light func" onclick="addTov()">Добавить товар</button></th>
+          <th><button class="btn btn-light func" onclick="formReport()">Сформировать отчет</button></th>
+        </tr>
+        <tr>
+          <th><input class="form-control" type="text" value="" id = "search-input-nameTovar"></th>
+          <th><input class="form-control" type="text" value="" id = "search-input-colTovar"></th>
+          <th><input class="form-control" type="text" value="" id = "search-input-garantTovar"></th>
+          <th><input class="form-control" type="text" value="" id = "search-input-personalTovar"></th>
+          <th><input class="form-control" type="text" value="" id = "search-input-postTovar"></th>
+          <th><input class="form-control" type="text" value="" id = "search-input-priceTovar"></th>
+          <th><input class="form-control" type="text" value="" id = "search-input-filialTovar"></th>
+          <th colspan="2">ФИЛЬТРАЦИЯ</th>
+        </tr>
+      </thead>
+      <tbody id = "row_table" class="row_table">
+
+      </tbody>
+    </table>
+    <script src = "./scripts/showNomTov.js"></script>
+  </body>
+</html>

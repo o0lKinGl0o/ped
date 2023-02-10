@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src * data: https://ssl.gstatic.com 'unsafe-inline' 'unsafe-eval'">-->
+    <link href="style/bootstrap-5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./style/bootstrap-5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style/main.css">
+    <title>PED</title>
+  </head>
+  <body>
+    <script src="./scripts/renderer.js"></script>
+    <script src="./scripts/mainScript.js"></script>
+    <h2>АВТОРИЗАЦИЯ</h2>
+    <form>
+      <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Логин">
+      </div>
+      <div class="mb-3">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Пароль">
+      </div>
+      <button type="button" class="btn btn-primary" onclick="authorisation()">Войти</button>
+      <button type="button" class="btn btn-primary exit" onclick="closeAppAuth()">Выйти из приложения</button>
+    </form>
+  </body>
+</html>
